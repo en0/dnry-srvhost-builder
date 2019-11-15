@@ -56,6 +56,9 @@ if __name__ == "__main__":
 ```
 
 That's it! You are ready to build something cool. You can do much more
+
+## How What?
+
 in setup_service and setup_config. For information on how to use the
 `IConfigFactory`, see the documentation at [en0/dnry-config](https://github.com/en0/dnry-config).
 For more information on how to use `StaticContainerBuilder`, see the

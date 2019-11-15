@@ -3,8 +3,8 @@ from setuptools import setup
 with open('requirements.txt') as f:
     requirements = f.readlines()
 
-with open('README.md') as f:
-    long_description = f.readline()
+with open('README.md', 'r') as f:
+    long_description = f.read()
 
 setup(
     name='dnry_srvhost-builder',
