@@ -8,18 +8,9 @@ from dnry.srvhost.builder.types import ISrvHost, IHostingEnvironment
 
 class SrvHostBase(ISrvHost, ABC):
     def __init__(self):
-        self.__app_name = None
         self.__service_provider = None
         self.__configuration = None
         self.__environment = None
-
-    @property
-    def app_name(self) -> str:
-        return self.__app_name
-
-    @app_name.setter
-    def app_name(self, val: str):
-        self.__app_name = val
 
     @property
     def service_provider(self) -> StaticContainer:

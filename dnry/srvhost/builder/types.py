@@ -52,16 +52,6 @@ class ISrvHostContext(ABC):
 class ISrvHost(ABC):
     @property
     @abstractmethod
-    def app_name(self) -> str:
-        raise NotImplemented()
-
-    @app_name.setter
-    @abstractmethod
-    def app_name(self, val: str):
-        raise NotImplemented()
-
-    @property
-    @abstractmethod
     def service_provider(self) -> StaticContainer:
         raise NotImplemented()
 
