@@ -25,7 +25,7 @@ Create your own own service host
 from dnry.srvhost.builder import SrvHostBase
 
 class AppHost(SrvHostBase):
-    def run(self):
+    def run(self, *args, **kwargs):
         print('Do something cool!')
 ```
 

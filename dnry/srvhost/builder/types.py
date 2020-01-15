@@ -9,102 +9,102 @@ class IHostingEnvironment(ABC):
     @property
     @abstractmethod
     def application_name(self) -> str:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @application_name.setter
     @abstractmethod
     def application_name(self, val: str):
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @property
     @abstractmethod
     def environment_name(self) -> str:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @environment_name.setter
     @abstractmethod
     def environment_name(self, val: str):
-        raise NotImplemented()
+        raise NotImplementedError()
 
 
 class ISrvHostContext(ABC):
     @property
     @abstractmethod
     def configuration(self) -> IConfigSection:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @configuration.setter
     @abstractmethod
     def configuration(self, val: IConfigSection) -> IConfigSection:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @property
     @abstractmethod
     def environment(self) -> IHostingEnvironment:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @environment.setter
     @abstractmethod
     def environment(self, val: IHostingEnvironment):
-        raise NotImplemented()
+        raise NotImplementedError()
 
 
 class ISrvHost(ABC):
     @property
     @abstractmethod
     def service_provider(self) -> StaticContainer:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @service_provider.setter
     @abstractmethod
     def service_provider(self, val: StaticContainer):
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @property
     @abstractmethod
     def configuration(self) -> IConfigSection:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @configuration.setter
     @abstractmethod
     def configuration(self, val: IConfigSection):
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @property
     @abstractmethod
     def environment(self) -> IHostingEnvironment:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @environment.setter
     @abstractmethod
     def environment(self, val: IHostingEnvironment):
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @abstractmethod
-    def run(self):
-        raise NotImplemented()
+    def run(self, *args, **kwargs):
+        raise NotImplementedError()
 
 
 class ISrvHostBuilder(ABC):
     @abstractmethod
     def build(self) -> ISrvHost:
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @abstractmethod
     def config_configuration(self, config: "ConfigConfigurationDelegate") -> "ISrvHostBuilder":
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @abstractmethod
     def config_services(self, config: "ConfigServicesDelegate") -> "ISrvHostBuilder":
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @abstractmethod
     def add_setting(self, key: str, value: str) -> "ISrvHostBuilder":
-        raise NotImplemented()
+        raise NotImplementedError()
 
     @abstractmethod
     def get_setting(self, key: str) -> str:
-        raise NotImplemented()
+        raise NotImplementedError()
 
 
 ConfigServicesDelegate = NewType("ConfigServicesDelegate", Callable[[ISrvHostContext], StaticContainerBuilder])
