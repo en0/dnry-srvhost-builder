@@ -81,7 +81,7 @@ class ISrvHost(ABC):
         raise NotImplementedError()
 
     @abstractmethod
-    def run(self, *args, **kwargs):
+    def run(self, *args, **kwargs) -> any:
         raise NotImplementedError()
 
 
