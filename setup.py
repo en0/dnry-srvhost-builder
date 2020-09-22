@@ -8,7 +8,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='dnry_srvhost-builder',
-    version='0.1.1',
+    version='0.2.0',
     author='Ian Laird',
     author_email='irlaird@gmail.com',
     url='https://github.com/en0/dnry-srvhost-builder',

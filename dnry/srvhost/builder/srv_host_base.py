@@ -1,7 +1,7 @@
 from abc import ABC
 
 from dnry.config import IConfigSection
-from pyioc3 import StaticContainer
+from pyioc3 import Container
 
 from dnry.srvhost.builder.types import ISrvHost, IHostingEnvironment
 
@@ -13,11 +13,11 @@ class SrvHostBase(ISrvHost, ABC):
         self.__environment = None
 
     @property
-    def service_provider(self) -> StaticContainer:
+    def service_provider(self) -> Container:
         return self.__service_provider
 
     @service_provider.setter
-    def service_provider(self, val: StaticContainer):
+    def service_provider(self, val: Container):
         self.__service_provider = val
 
     @property

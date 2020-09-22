@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Callable, NewType
-from pyioc3 import StaticContainerBuilder, StaticContainer
+from pyioc3 import StaticContainerBuilder, Container
 
 from dnry.config import IConfigFactory, IConfigSection
 
@@ -52,12 +52,12 @@ class ISrvHostContext(ABC):
 class ISrvHost(ABC):
     @property
     @abstractmethod
-    def service_provider(self) -> StaticContainer:
+    def service_provider(self) -> Container:
         raise NotImplementedError()
 
     @service_provider.setter
     @abstractmethod
-    def service_provider(self, val: StaticContainer):
+    def service_provider(self, val: Container):
         raise NotImplementedError()
 
     @property

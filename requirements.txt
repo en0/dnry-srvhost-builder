@@ -1,2 +1,2 @@
-pyioc3
-dnry-config
+pyioc3==1.3.0
+dnry-config==0.1.4

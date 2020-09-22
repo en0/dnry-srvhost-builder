@@ -1,7 +1,7 @@
 import unittest
 
 from dnry.config import IConfigSection
-from pyioc3 import StaticContainerBuilder, StaticContainer
+from pyioc3 import StaticContainerBuilder, Container
 
 from dnry.srvhost.builder import SrvHostBuilder, ISrvHost, SrvHostBase, IHostingEnvironment
 
@@ -28,7 +28,7 @@ class TestInjection(unittest.TestCase):
 
     def test_host_has_service_provider(self):
         host = SrvHostBuilder("ut").build()
-        self.assertIsInstance(host.service_provider, StaticContainer)
+        self.assertIsInstance(host.service_provider, Container)
 
     def test_host_has_config(self):
         host = SrvHostBuilder("ut").build()
